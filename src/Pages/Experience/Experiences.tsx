@@ -13,8 +13,8 @@ interface ExperienceItem {
 
 const Experiences: React.FC<Prop> = () => {
   return (
-    <div className="mt-10 flex px-24 justify-between gap-6">
-      <div className="flex flex-1 hover:overflow-x-auto overflow-hidden">
+    <div className="w-full mt-10 flex px-24 justify-center gap-6">
+      <div className="flex flex-1 hover:overflow-x-auto overflow-hidden scrollbar">
         {experienceList.map((item: ExperienceItem) => (
           <div
             key={item.id}
@@ -29,11 +29,11 @@ const Experiences: React.FC<Prop> = () => {
           </div>
         ))}
       </div>
-      <div className="flex gap-5 border border-gray-300 rounded-2xl px-5 justify-center items-center">
+      <div className="hover:border hover:border-black flex gap-5 border border-gray-300 rounded-2xl px-5 justify-center items-center">
         <RiSoundModuleFill className="text-3xl font-bold text-gray-700" />
         <p className="text-xs font-semibold text-gray-700">Filters</p>
       </div>
-      <div className="flex gap-5 border border-gray-300 px-5 rounded-2xl justify-center items-center">
+      <div className="hover:border hover:border-black cursor-pointer flex gap-5 border border-gray-300 px-5 rounded-2xl justify-center items-center">
         <p className="text-xs font-semibold text-gray-500">
           Display total before taxes
         </p>
