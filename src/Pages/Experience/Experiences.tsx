@@ -14,7 +14,7 @@ interface ExperienceItem {
 const Experiences: React.FC<Prop> = () => {
   return (
     <div className="w-full mt-10 flex px-24 justify-center gap-6">
-      <div className="flex flex-1 hover:overflow-x-auto overflow-hidden scrollbar">
+      <div className="flex flex-1 hover:overflow-x-auto overflow-hidden">
         {experienceList.map((item: ExperienceItem) => (
           <div
             key={item.id}
