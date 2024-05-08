@@ -42,8 +42,19 @@ function Categories(): JSX.Element {
       <p className="pl-10 pt-16 font-semibold text-xl mt-16">
         Inspiration for future getaways
       </p>
-      <div className="flex gap-5 pl-10 pt-5 font-semibold text-gray-500">
+      <div className="max-sm:hidden flex gap-5 pl-10 pt-5 font-semibold text-gray-500 overflow-hidden scrollbar-none">
         {categories.map((item) => (
+          <button
+            className="hover:text-gray-800"
+            key={item.id}
+            onClick={() => handleCategoryClick(item.text)}
+          >
+            {item.text}
+          </button>
+        ))}
+      </div>
+      <div className="sm:hidden flex gap-5 pl-10 pt-5 font-semibold text-gray-500 overflow-hidden scrollbar-none">
+        {categories.slice(0, 5).map((item) => (
           <button
             className="hover:text-gray-800"
             key={item.id}
@@ -55,7 +66,7 @@ function Categories(): JSX.Element {
       </div>
 
       <hr className="border border-gray-300 my-4 mx-10" />
-      <div className="h-[200px] w-[80%] flex flex-col flex-wrap gap-10">
+      <div className="h-[200px] w-[85%] flex flex-col flex-wrap gap-10 overflow-hidden overflow-x-hidden">
         {currentCategory.map((item) => (
           <div
             className="flex gap-6 pl-10 pt-2 font-semibold text-gray-500 "

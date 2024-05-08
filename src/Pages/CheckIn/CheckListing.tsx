@@ -9,11 +9,11 @@ const CheckListing: React.FC = () => {
     <>
       <div className="px-4 md:px-12 mt-10 w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {listings.map((listing: Listing) => (
-          <div key={listing.id} className="flex flex-col w-[270px]">
+          <div key={listing.id} className="flex flex-col w-full">
             <img
               src={listing.imageUrl}
               alt="rooms"
-              className="w-[300px] h-[260px] rounded-2xl"
+              className="w-full h-[260px] rounded-2xl  object-conver"
             />
             <div className="flex justify-between text-sm mt-4">
               <p className="font-semibold">{listing.location}</p>

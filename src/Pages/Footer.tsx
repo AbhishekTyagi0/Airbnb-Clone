@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
     <>
       <hr className="border border-gray-200" />
 
-      <div className="grid grid-cols-3 gap-2 w-full h-[250px] bg-gray-100 p-10">
+      <div className="grid grid-cols-3 gap-6 w-full h-[250px] bg-gray-100 p-10">
         {footer.map((section) => (
-          <div key={section.heading} className="flex flex-col space-y-2 gap-4">
+          <div key={section.heading} className="flex flex-col space-y-1 gap-4">
             <h3 className="font-bold">{section.heading}</h3>
             <ul className="text-sm flex gap-4 flex-col">
               {section.data.map((item) => (
@@ -27,19 +27,19 @@ const Footer: React.FC = () => {
         ))}
       </div>
       <hr className="border border-gray-200" />
-      <div className="w-full flex bg-gray-100 h-[50px] justify-between items-center px-10">
-        <div className="text-md flex gap-6 items-center text-gray-500">
+      <div className="w-full flex bg-gray-100 h-[50px] justify-between items-center px-3 sm:px-10">
+        <div className=" text-xs sm:text-md flex gap-2 sm:gap-6 items-center text-gray-500">
           <span>© 2024 Airbnb, Inc. </span> <span> Privacy </span>
           <span> Terms </span>
-          <span> Sitemap </span>
-          <span> Company details </span>
+          <span className="max-sm:hidden"> Sitemap </span>
+          <span className="max-sm:hidden"> Company details </span>
         </div>
-        <div className="text-md flex gap-6 items-center text-bold text-xl">
+        <div className="text-md flex gap-3 sm:gap-6 items-center text-bold text-xl">
           <span>
-            <CiGlobe className="text-3xl" />
+            <CiGlobe className="text-lg sm:text-3xl" />
           </span>
-          <span className=" text-sm">English (IN)</span>
-          <span className=" text-sm">₹ INR</span>
+          <span className="text-xs sm:text-sm">English (IN)</span>
+          <span className="text-xs sm:text-sm">₹ INR</span>
           <span>
             <ImFacebook2 />
           </span>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             <FaInstagramSquare />
           </span>
           <span>
-            <TiSocialTwitter className="text-3xl" />
+            <TiSocialTwitter className="sm:text-3xl" />
           </span>
         </div>
       </div>
