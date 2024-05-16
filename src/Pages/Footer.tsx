@@ -9,11 +9,11 @@ const Footer: React.FC = () => {
     <>
       <hr className="border border-gray-200" />
 
-      <div className="grid grid-cols-3 gap-6 w-full h-[250px] bg-gray-100 p-10">
+      <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full h-full sm:h-[250px] bg-gray-100 p-10">
         {footer.map((section) => (
           <div key={section.heading} className="flex flex-col space-y-1 gap-4">
             <h3 className="font-bold">{section.heading}</h3>
-            <ul className="text-sm flex gap-4 flex-col">
+            <ul className="text-xs sm:text-sm flex gap-2 sm:gap-4 flex-col">
               {section.data.map((item) => (
                 <li
                   key={item.id}

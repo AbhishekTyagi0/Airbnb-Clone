@@ -66,10 +66,10 @@ function Categories(): JSX.Element {
       </div>
 
       <hr className="border border-gray-300 my-4 mx-10" />
-      <div className="h-[200px] w-[85%] flex flex-col flex-wrap gap-10 overflow-hidden overflow-x-hidden">
+      <div className="h-[180px] sm:h-[200px] w-full sm:w-[85%] flex flex-col flex-wrap gap-6 sm:gap-10 pl-4 overflow-hidden overflow-x-auto">
         {currentCategory.map((item) => (
           <div
-            className="flex gap-6 pl-10 pt-2 font-semibold text-gray-500 "
+            className="flex gap-6 sm:pl-10 pl-4 pt-2 font-semibold text-gray-500 "
             key={item.subheading}
           >
             <div className="flex gap-1 flex-col">
